@@ -10,7 +10,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import guru.framework.msscbeerorderservice.domain.BeerOrder;
 import guru.framework.msscbeerorderservice.domain.BeerOrderLine;
 import guru.framework.msscbeerorderservice.domain.Customer;
-import guru.framework.msscbeerorderservice.domain.OrderStatusEnum;
+import guru.framework.msscbeerorderservice.domain.BeerOrderStatusEnum;
 
 public interface BeerOrderLineRepository extends PagingAndSortingRepository<BeerOrderLine, UUID> {
 

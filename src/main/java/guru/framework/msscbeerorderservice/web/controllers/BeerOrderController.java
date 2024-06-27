@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import guru.framework.msscbeerorderservice.services.BeerOrderService;
-import guru.framework.msscbeerorderservice.web.model.BeerOrderDto;
+import guru.springframework.brewery.model.BeerOrderDto;
 
 @RestController
 @RequestMapping("/v1/beerOrder/")

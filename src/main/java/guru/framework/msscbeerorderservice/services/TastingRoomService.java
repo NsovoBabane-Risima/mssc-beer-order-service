@@ -15,8 +15,8 @@ import guru.framework.msscbeerorderservice.bootstrap.BeerOrderBootStrap;
 import guru.framework.msscbeerorderservice.domain.Customer;
 import guru.framework.msscbeerorderservice.repositories.BeerOrderRepository;
 import guru.framework.msscbeerorderservice.repositories.CustomerRepository;
-import guru.framework.msscbeerorderservice.web.model.BeerOrderDto;
-import guru.framework.msscbeerorderservice.web.model.BeerOrderLineDto;
+import guru.springframework.brewery.model.BeerOrderDto;
+import guru.springframework.brewery.model.BeerOrderLineDto;
 import lombok.extern.slf4j.Slf4j;
 
 @Service

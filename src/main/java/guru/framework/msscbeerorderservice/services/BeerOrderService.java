@@ -4,8 +4,8 @@ import java.util.UUID;
 
 import org.springframework.data.domain.Pageable;
 
-import guru.framework.msscbeerorderservice.web.model.BeerOrderDto;
-import guru.framework.msscbeerorderservice.web.model.BeerOrderPagedList;
+import guru.springframework.brewery.model.BeerOrderDto;
+import guru.springframework.brewery.model.BeerOrderPagedList;
 
 public interface BeerOrderService {
 

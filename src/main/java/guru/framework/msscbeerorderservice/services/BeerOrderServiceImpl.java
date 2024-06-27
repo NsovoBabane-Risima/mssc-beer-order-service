@@ -12,14 +12,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import guru.framework.msscbeerorderservice.domain.BeerOrder;
 import guru.framework.msscbeerorderservice.domain.Customer;
-import guru.framework.msscbeerorderservice.domain.OrderStatusEnum;
+import guru.framework.msscbeerorderservice.domain.BeerOrderStatusEnum;
 import guru.framework.msscbeerorderservice.domain.exceptions.NotFoundException;
 import guru.framework.msscbeerorderservice.repositories.BeerOrderRepository;
 import guru.framework.msscbeerorderservice.repositories.CustomerRepository;
 import guru.framework.msscbeerorderservice.web.mappers.BeerOrderLineMapper;
 import guru.framework.msscbeerorderservice.web.mappers.BeerOrderMapper;
-import guru.framework.msscbeerorderservice.web.model.BeerOrderDto;
-import guru.framework.msscbeerorderservice.web.model.BeerOrderPagedList;
+import guru.springframework.brewery.model.BeerOrderDto;
+import guru.springframework.brewery.model.BeerOrderPagedList;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -63,7 +63,7 @@ public class BeerOrderServiceImpl implements BeerOrderService {
 			BeerOrder beerOrder = beerOrderMapper.beerOrderDtoToBeerOrder(beerOrderDto);
 			beerOrder.setId(null);
 			beerOrder.setCustomer(customerOptional.get());
-			beerOrder.setOrderStatus(OrderStatusEnum.NEW);
+			beerOrder.setOrderStatus(BeerOrderStatusEnum.NEW);
 
 			beerOrder.getBeerOrderLines().forEach(line -> line.setBeerOrder(beerOrder));
 
@@ -110,7 +110,7 @@ public class BeerOrderServiceImpl implements BeerOrderService {
 
 				BeerOrder beerOrder = beerOrderRepository.findById(orderId).get();
 				if (beerOrder.getCustomer().getId() == customerId) {
-					beerOrder.setOrderStatus(OrderStatusEnum.PICKED_UP);
+					beerOrder.setOrderStatus(BeerOrderStatusEnum.PICKED_UP);
 					beerOrderRepository.saveAndFlush(beerOrder);
 				}
 				throw new RuntimeException("order not for customer");

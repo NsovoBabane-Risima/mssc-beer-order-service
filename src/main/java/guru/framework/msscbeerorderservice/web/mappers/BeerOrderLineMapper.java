@@ -4,7 +4,7 @@ import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 
 import guru.framework.msscbeerorderservice.domain.BeerOrderLine;
-import guru.framework.msscbeerorderservice.web.model.BeerOrderLineDto;
+import guru.springframework.brewery.model.BeerOrderLineDto;
 
 
 

@@ -12,13 +12,13 @@ import org.springframework.data.jpa.repository.Lock;
 
 import guru.framework.msscbeerorderservice.domain.BeerOrder;
 import guru.framework.msscbeerorderservice.domain.Customer;
-import guru.framework.msscbeerorderservice.domain.OrderStatusEnum;
+import guru.framework.msscbeerorderservice.domain.BeerOrderStatusEnum;
 
 public interface BeerOrderRepository extends JpaRepository<BeerOrder, UUID> {
 
 	Page<BeerOrder> findAllByCustomer(Customer customer, Pageable pageable);
 
-	List<BeerOrder> findAllByOrderStatus(OrderStatusEnum orderStatusEnum);
+	List<BeerOrder> findAllByOrderStatus(BeerOrderStatusEnum orderStatusEnum);
 
 	@Lock(LockModeType.PESSIMISTIC_WRITE)
 	BeerOrder findOneById(UUID id);

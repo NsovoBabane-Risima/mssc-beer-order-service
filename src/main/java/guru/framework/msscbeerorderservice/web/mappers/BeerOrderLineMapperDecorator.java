@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import guru.framework.msscbeerorderservice.domain.BeerOrderLine;
 import guru.framework.msscbeerorderservice.services.beerservice.BeerService;
 import guru.framework.msscbeerorderservice.services.beerservice.model.BeerDto;
-import guru.framework.msscbeerorderservice.web.model.BeerOrderLineDto;
+import guru.springframework.brewery.model.BeerOrderLineDto;
 
 public abstract class BeerOrderLineMapperDecorator implements BeerOrderLineMapper {
 
